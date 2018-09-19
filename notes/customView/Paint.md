@@ -32,23 +32,24 @@
 
 可以设置一套着色方案用于绘制颜色，常用的有：
 
-1. ##### `LinearGradient` 线性渐变 
-
-    ###### 构造方法：
+1. #### `LinearGradient` 线性渐变  
+   
+   构造方法：
 
    `LinearGradient(float x0, float y0, float x1, float y1, int color0, int color1, Shader.TileMode tile)`  
 
-   ###### 参数：
+   参数：  
+
    `(x0,y0)` `(x1,y1)`：渐变的两个端点坐标
    `color0` `color1`：渐变的两个端点颜色
    `title`：渐变规则（`CLAMP`、`REPEAT`、`MIRROR` ）
    <br>
-2. ##### `RadialGradient` 镭射渐变
-3. ##### `SweepGradient` 扫描渐变
+2. #### `RadialGradient` 镭射渐变
+3. #### `SweepGradient` 扫描渐变
 
-4. ##### `BitmapShader` 用 `Bitmap` 着色
+4. #### `BitmapShader` 用 `Bitmap` 着色
 
-5. ##### `ComposeShader` 混合着色器
+5. #### `ComposeShader` 混合着色器
   
      混合着色器就是把两个 `Shader` 一起使用
 
