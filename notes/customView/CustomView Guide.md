@@ -6,10 +6,10 @@
 
 ###  绘制基础
 
-- [Paint](https://hencoder.com/overview/)
+- [Paint](https://github.com/ttuy111/Note/blob/master/notes/customView/Paint.md)
     
     Paint 相关的 API 解释。
 
-- [Cavans](https://hencoder.com/overview/)
+- [Cavans](https://github.com/ttuy111/Note/blob/master/notes/customView/Cavans.md)
 
     Canans 相关的 API 解释。
