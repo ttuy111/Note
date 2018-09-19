@@ -4,7 +4,6 @@
 
 <br>
 <div align="center">
-
     <img src="other/LogoMakr_0zpEzN.png" width="150px">
     <br>
 </div>
