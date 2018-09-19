@@ -52,7 +52,7 @@
 
 ### :bulb: 日常问题 
 
-- [Android 崩溃解决]()
+- [Android 崩溃解决](https://github.com/ttuy111/Note/blob/master/notes/Android%20Solve.md)
 
   主要记录 **Android** 开发过程中一些平时碰到的崩溃和解决方法。
 
