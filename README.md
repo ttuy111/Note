@@ -39,10 +39,6 @@
 
   方法、状态码、Cookie、缓存、连接管理、HTTPs、HTTP 2.0。
 
-- [Socket]()
-
-  I/O 模型、I/O 多路复用。
-
 ### :couple: 面向对象
 
 - [空]()
