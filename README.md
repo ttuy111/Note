@@ -1,15 +1,14 @@
 | Ⅰ | Ⅱ | Ⅲ | Ⅳ | Ⅴ | Ⅵ | Ⅶ | Ⅷ | Ⅸ | Ⅹ |
 | :--------: | :---------: | :---------: | :---------: | :---------: | :---------:| :---------: | :-------: | :-------:| :------:|
-| Android[:iphone:](#iphone-安卓) | Java [:coffee:](#coffee-java)| 算法[:pencil2:](#pencil2-算法) | 网络[:cloud:](#cloud-网络) | 面向对象[:couple:](#couple-面向对象) |备胎[:floppy_disk:](#floppy_disk-数据库)|  备胎[:bulb:](#bulb-系统设计)| 工具[:hammer:](#hammer-工具)| 编码实践[:speak_no_evil:](#speak_no_evil-编码实践)| 后记[:memo:](#memo-后记) |
+| Android[:iphone:](#iphone-Android) | Java [:coffee:](#coffee-java)| 算法[:pencil2:](#pencil2-算法) | 网络[:cloud:](#cloud-网络) | 面向对象[:couple:](#couple-面向对象) |备胎[:floppy_disk:](#floppy_disk-数据库)|  备胎[:bulb:](#bulb-系统设计)| 工具[:hammer:](#hammer-工具)| 编码实践[:speak_no_evil:](#speak_no_evil-编码实践)| 后记[:memo:](#memo-后记) |
 
 <br>
 <div align="center">
     <img src="other/LogoMakr_0zpEzN.png" width="150px">
     <br>
-    <a href="other/Group.md"> <img src="https://img.shields.io/badge/>-group-4ab8a1.svg"></a> <a href="https://legacy.gitbook.com/book/cyc2018/interview-notebook/details"> <img src="https://img.shields.io/badge/_-gitbook-4ab8a1.svg"></a> 
 </div>
 
-### :iphone: 安卓
+### :iphone:Android
 - [小备胎（占位，空白）]()
 
   小备胎。
@@ -46,13 +45,9 @@
 
 ### :couple: 面向对象
 
-- [设计模式](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/设计模式.md)
+- [空]()
 
-  实现了 Gof 的 23 种设计模式。
-
-- [面向对象思想](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/面向对象思想.md)
-
-  三大原则（继承、封装、多态）、类图、设计原则。
+  空空哒。
 
 ### :floppy_disk: 备胎 
 
@@ -65,16 +60,6 @@
 - [Git](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Git.md)
 
   一些 Git 的使用和概念。
-
-- [Docker](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Docker.md)
-
-  Docker 基本原理。
-
-- [正则表达式](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/正则表达式.md)
-
-  正则表达式基本语法。
-
-- [构建工具](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/构建工具.md)
 
   构建工具的基本概念、主流构建工具介绍。
 
@@ -116,21 +101,8 @@
 
 笔记内容按照 [中文文案排版指北](http://mazhuang.org/wiki/chinese-copywriting-guidelines/) 进行排版，以保证内容的可读性。
 
-笔记不使用 `![]()` 这种方式来引用图片，而是用 `<img>` 标签。一方面是为了能够控制图片以合适的大小显示，另一方面是因为 GFM 不支持 `<center> ![]() </center>` 让图片居中显示，只能使用 `<div align="center"> <img src=""/> </div>` 达到居中的效果。
 
-笔者将自己实现的文档排版功能提取出来，放在 Github Page 中，无需下载安装即可免费使用：[Text-Typesetting](https://github.com/CyC2018/Markdown-Typesetting)。
 
-#### Uploading
-
-笔者在本地使用为知笔记软件进行书写，为了方便将本地笔记内容上传到 Github 上，实现了一整套自动化上传方案，包括文本文件的导出、提取图片、Markdown 文档转换、Git 同步。
-
-进行 Markdown 文档转换是因为 Github 使用的 GFM 不支持 MathJax 公式和 TOC 标记，所以需要替换 MathJax 公式为 CodeCogs 的云服务和重新生成 TOC 目录。
-
-笔者将自己实现文档转换功能提取出来，方便大家在需要将本地 Markdown 上传到 Github，或者制作项目 README 文档时生成目录时使用：[GFM-Converter](https://github.com/CyC2018/GFM-Converter)。
-
-#### Statement
-
-本仓库不参与商业行为，不向读者收取任何费用。(This repository is not engaging in business activities, and does not charge readers any fee.)
 
 #### Logo
 
