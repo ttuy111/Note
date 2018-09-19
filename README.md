@@ -7,9 +7,9 @@
 </div>
 
 ### :iphone:Android
-- [小备胎（占位，空白）]()
+- [自定义 View](https://github.com/ttuy111/Note/blob/master/notes/CustomView%20Guide.md)
 
-  小备胎。
+  参考仍物线的 HenCoder 自定义 View 系列学习。
 
 ### :coffee: Java
 
