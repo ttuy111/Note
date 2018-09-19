@@ -57,28 +57,6 @@
 
   三大原则（继承、封装、多态）、类图、设计原则。
 
-### :floppy_disk: 数据库 
-
-- [数据库系统原理](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/数据库系统原理.md)
-
-  事务、锁、隔离级别、MVCC、间隙锁、范式。
-
-- [SQL](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/SQL.md)
-
-  SQL 基本语法。
-
-- [Leetcode-Database 题解](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Leetcode-Database%20题解.md)
-
-  Leetcode 上数据库题目的解题记录。
-
-- [MySQL](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/MySQL.md)
-
-  存储引擎、索引、查询优化、切分、复制。
-
-- [Redis](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Redis.md)
-
-  五种数据类型、字典和跳跃表数据结构、使用场景、和 Memcache 的比较、淘汰策略、持久化、文件事件的 Reactor 模式、复制。
-
 ### :coffee: Java
 
 - [Java 基础](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Java%20基础.md)
@@ -100,32 +78,6 @@
 - [Java I/O](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Java%20IO.md)
 
   NIO 的原理以及实例。
-
-### :bulb: 系统设计 
-
-- [系统设计基础](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/系统设计基础.md)
-
-  性能、伸缩性、扩展性、可用性、安全性
-
-- [分布式](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/分布式.md)
-
-  分布式锁、分布式事务、CAP、BASE、Paxos、Raft
-
-- [集群](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/集群.md)
-
-  负载均衡、Session 管理
-
-- [攻击技术](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/攻击技术.md)
-
-  XSS、CSRF、SQL 注入、DDoS
-
-- [缓存](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/缓存.md)
-
-  缓存特征、缓存位置、缓存问题、数据分布、一致性哈希、LRU、CDN
-
-- [消息队列](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/消息队列.md)
-
-  消息处理模型、使用场景、可靠性
 
 ### :hammer: 工具 
 
