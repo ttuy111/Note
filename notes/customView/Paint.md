@@ -4,7 +4,7 @@
 
 - `Paint.setStyle(Style style)` 设置绘制模式
 - `Paint.setColor(int color)` 设置颜色
-- `Paint.setStrokeWidth(float width)` 设置线条的宽度
+- `Paint.setStrokeWidth(float width)` 设置线条的宽度
 - `Paint.setTextSize(float textSize)` 设置文字大小
 - `Paint.setAntAlias(boolean aa)` 设置抗锯齿开关
 
