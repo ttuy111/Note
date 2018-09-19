@@ -16,7 +16,7 @@
 
 ### :coffee: Java
 
-- [Java 基础](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Java%20基础.md)
+- [Java 基础]()
 
   不会涉及很多基本语法介绍，主要是一些实现原理以及关键特性。
 
@@ -40,7 +40,7 @@
 
   方法、状态码、Cookie、缓存、连接管理、HTTPs、HTTP 2.0。
 
-- [Socket](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Socket.md)
+- [Socket]()
 
   I/O 模型、I/O 多路复用。
 
@@ -58,7 +58,7 @@
 
 ### :hammer: 工具 
 
-- [Git](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Git.md)
+- [Git]()
 
   一些 Git 的使用和概念。
 
@@ -66,15 +66,15 @@
 
 ### :speak_no_evil: 编码实践 
 
-- [重构](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/重构.md)
+- [重构]()
 
   参考 重构 改善既有代码的设计。
 
-- [代码可读性](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/代码可读性.md)
+- [代码可读性]()
 
   参考 编写可读代码的艺术。
 
-- [代码风格规范](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/代码风格规范.md)
+- [代码风格规范]()
 
   Google 开源项目的代码风格规范。
 
