@@ -1,6 +1,6 @@
-| Ⅰ | Ⅱ | Ⅲ | Ⅳ | Ⅴ | Ⅵ | Ⅶ |
-| :--------: | :---------: | :---------: | :---------: | :---------: | :---------:| :---------: |
-| 算法[:pencil2:](#pencil2-算法) |网络[:cloud:](#cloud-网络) | 面向对象[:couple:](#couple-面向对象) | Java [:coffee:](#coffee-java)| 工具[:hammer:](#hammer-工具)| 编码实践[:speak_no_evil:](#speak_no_evil-编码实践)| 后记[:memo:](#memo-后记) |
+| Ⅰ | Ⅱ | Ⅲ | Ⅳ | Ⅴ | Ⅵ | Ⅶ | Ⅷ | Ⅸ | Ⅹ |
+| :--------: | :---------: | :---------: | :---------: | :---------: | :---------:| :---------: | :-------: | :-------:| :------:|
+| 算法[:pencil2:](#pencil2-算法) | Android[:iphone:](#iphone-Android)|网络[:cloud:](#cloud-网络) | 面向对象[:couple:](#couple-面向对象) |数据库[:floppy_disk:](#floppy_disk-数据库)| Java [:coffee:](#coffee-java)| 系统设计[:bulb:](#bulb-系统设计)| 工具[:hammer:](#hammer-工具)| 编码实践[:speak_no_evil:](#speak_no_evil-编码实践)| 后记[:memo:](#memo-后记) |
 
 <br>
 <div align="center">
@@ -22,6 +22,15 @@
  - [算法（占位,空白）]()
 
    排序、并查集、栈和队列、红黑树、散列表。
+
+### :iphone: Android
+- [计算机操作系统（占位，空白）]()
+
+  进程管理、内存管理、设备管理、链接。
+
+- [Linux](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Linux.md)
+
+  基本实现原理以及基本操作。
 
 ### :cloud: 网络 
 
@@ -47,6 +56,28 @@
 
   三大原则（继承、封装、多态）、类图、设计原则。
 
+### :floppy_disk: 数据库 
+
+- [数据库系统原理](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/数据库系统原理.md)
+
+  事务、锁、隔离级别、MVCC、间隙锁、范式。
+
+- [SQL](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/SQL.md)
+
+  SQL 基本语法。
+
+- [Leetcode-Database 题解](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Leetcode-Database%20题解.md)
+
+  Leetcode 上数据库题目的解题记录。
+
+- [MySQL](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/MySQL.md)
+
+  存储引擎、索引、查询优化、切分、复制。
+
+- [Redis](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Redis.md)
+
+  五种数据类型、字典和跳跃表数据结构、使用场景、和 Memcache 的比较、淘汰策略、持久化、文件事件的 Reactor 模式、复制。
+
 ### :coffee: Java
 
 - [Java 基础](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Java%20基础.md)
@@ -68,6 +99,32 @@
 - [Java I/O](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Java%20IO.md)
 
   NIO 的原理以及实例。
+
+### :bulb: 系统设计 
+
+- [系统设计基础](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/系统设计基础.md)
+
+  性能、伸缩性、扩展性、可用性、安全性
+
+- [分布式](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/分布式.md)
+
+  分布式锁、分布式事务、CAP、BASE、Paxos、Raft
+
+- [集群](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/集群.md)
+
+  负载均衡、Session 管理
+
+- [攻击技术](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/攻击技术.md)
+
+  XSS、CSRF、SQL 注入、DDoS
+
+- [缓存](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/缓存.md)
+
+  缓存特征、缓存位置、缓存问题、数据分布、一致性哈希、LRU、CDN
+
+- [消息队列](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/消息队列.md)
+
+  消息处理模型、使用场景、可靠性
 
 ### :hammer: 工具 
 
@@ -109,7 +166,9 @@
 
 学习笔记不是从网上到处拼凑而来，除了少部分引用书上和技术文档的原文，其余都是笔者的原创。在您引用本仓库内容或者对内容进行修改演绎时，请遵循文末的开源协议，谢谢。
 
+#### BookList
 
+本仓库参考的书目：[BOOKLIST](https://github.com/CyC2018/Interview-Notebook/blob/master/BOOKLIST.md)。
 
 #### How To Contribute
 
@@ -123,6 +182,17 @@
 
 笔记内容按照 [中文文案排版指北](http://mazhuang.org/wiki/chinese-copywriting-guidelines/) 进行排版，以保证内容的可读性。
 
+笔记不使用 `![]()` 这种方式来引用图片，而是用 `<img>` 标签。一方面是为了能够控制图片以合适的大小显示，另一方面是因为 GFM 不支持 `<center> ![]() </center>` 让图片居中显示，只能使用 `<div align="center"> <img src=""/> </div>` 达到居中的效果。
+
+笔者将自己实现的文档排版功能提取出来，放在 Github Page 中，无需下载安装即可免费使用：[Text-Typesetting](https://github.com/CyC2018/Markdown-Typesetting)。
+
+#### Uploading
+
+笔者在本地使用为知笔记软件进行书写，为了方便将本地笔记内容上传到 Github 上，实现了一整套自动化上传方案，包括文本文件的导出、提取图片、Markdown 文档转换、Git 同步。
+
+进行 Markdown 文档转换是因为 Github 使用的 GFM 不支持 MathJax 公式和 TOC 标记，所以需要替换 MathJax 公式为 CodeCogs 的云服务和重新生成 TOC 目录。
+
+笔者将自己实现文档转换功能提取出来，方便大家在需要将本地 Markdown 上传到 Github，或者制作项目 README 文档时生成目录时使用：[GFM-Converter](https://github.com/CyC2018/GFM-Converter)。
 
 #### Statement
 
