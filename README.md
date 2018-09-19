@@ -11,21 +11,21 @@
 
 ### :pencil2: 算法
 
-- [剑指 Offer 题解](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/剑指%20offer%20题解.md)
+- [剑指 Offer 题解]()
 
   目录根据原书第二版进行编排，代码和原书有所不同，尽量比原书更简洁。
 
-- [Leetcode 题解](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Leetcode%20题解.md)
+- [Leetcode 题解]()
 
   对题目做了一个大致分类，并对每种题型的解题思路做了总结。
   
- - [算法](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/算法.md)
+ - [算法]()
 
    排序、并查集、栈和队列、红黑树、散列表。
 
 ### :computer: 操作系统
 
-- [计算机操作系统](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/计算机操作系统.md)
+- [计算机操作系统]()
 
   进程管理、内存管理、设备管理、链接。
 
@@ -35,7 +35,7 @@
 
 ### :cloud: 网络 
 
-- [计算机网络](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/计算机网络.md)
+- [计算机网络]()
 
   物理层、链路层、网络层、运输层、应用层。
 
