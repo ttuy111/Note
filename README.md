@@ -1,6 +1,6 @@
 | Ⅰ | Ⅱ | Ⅲ | Ⅳ | Ⅴ | Ⅵ | Ⅶ | Ⅷ | Ⅸ | Ⅹ |
 | :--------: | :---------: | :---------: | :---------: | :---------: | :---------:| :---------: | :-------: | :-------:| :------:|
-| Android[:iphone:](#iphone-Android) | Java [:coffee:](#coffee-java)| 算法[:pencil2:](#pencil2-算法) | 网络[:cloud:](#cloud-网络) | 面向对象[:couple:](#couple-面向对象) |备胎[:floppy_disk:](#floppy_disk-数据库)|  备胎[:bulb:](#bulb-系统设计)| 工具[:hammer:](#hammer-工具)| 编码实践[:speak_no_evil:](#speak_no_evil-编码实践)| 后记[:memo:](#memo-后记) |
+| Android[:iphone:](#iphone-Android) | Java [:coffee:](#coffee-java)| 算法[:pencil2:](#pencil2-算法) | 网络[:cloud:](#cloud-网络) | 面向对象[:couple:](#couple-面向对象) |备胎[:floppy_disk:](#floppy_disk-数据库)|  日常问题[:bulb:](#bulb-日常问题)| 工具[:hammer:](#hammer-工具)| 编码实践[:speak_no_evil:](#speak_no_evil-编码实践)| 后记[:memo:](#memo-后记) |
 
 <br>
 <div align="center">
@@ -50,13 +50,18 @@
 
 
 
-### :bulb: 备胎 
+### :bulb: 日常问题 
+
+- [Android 崩溃解决]()
+
+  主要记录 **Android** 开发过程中一些平时碰到的崩溃和解决方法。
 
 ### :hammer: 工具 
 
 - [Git]()
 
   一些 Git 的使用和概念。
+
 
 ### :speak_no_evil: 编码实践 
 
