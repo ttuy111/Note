@@ -25,3 +25,4 @@ Paint.setColor(int color)
 Paint.setARGB(int a, int r, int g, int b)
 
 两种方式用来设置绘制内容的颜色 常用第一种
+
