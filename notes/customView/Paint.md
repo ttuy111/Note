@@ -138,6 +138,11 @@
 - `SQUARE`：方头  
   
   <br>
-  <img src=".../pic/paint1.png"/><br>
+
+  <img src="../../pic/paint1.png"/>
+  
+  <br>
+    
+  虚线为虚拟的，虚线的左边为线的实际长度，右边为不同类型下的区别
 
 
