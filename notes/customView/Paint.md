@@ -42,8 +42,14 @@
 
    `(x0,y0)` `(x1,y1)`：渐变的两个端点坐标  
    `color0` `color1`：渐变的两个端点颜色  
-   `title`：渐变规则（`CLAMP`、`REPEAT`、`MIRROR` ）
-   <br>
+   `title`：渐变规则（`CLAMP`、`REPEAT`、`MIRROR` ）  
+
+    注：渐变规则
+    
+    - `CLAMP`：端点之外延续端点处的颜色
+    - `REPEAT`：重复模式，重复的绘制渐变对象
+    - `MIRROR`：镜像模式，对称的绘制渐变对象
+  
 2. #### `RadialGradient` 辐射渐变
    
      构造方法：  
@@ -98,10 +104,7 @@
       `PorterDuff.Mode` 一共可以分为两大类：参考 [官方文档](https://developer.android.com/reference/android/graphics/PorterDuff.Mode)  
       
       1.Alpha 合成  
-
-
       2.混合  
-
 
      
 
