@@ -127,4 +127,17 @@
 
 `Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG)`
 
+### 设置线端点的形状
+
+`paint.setStrokeCap(cap)`  
+
+`cap` 有三种类型：
+
+- `ROUND`：圆头
+- `BUTT`：平头
+- `SQUARE`：方头  
+  
+  <br>
+  <img src="pic/paint1.png"/><br>
+
 
