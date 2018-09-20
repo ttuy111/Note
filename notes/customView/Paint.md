@@ -138,6 +138,6 @@
 - `SQUARE`：方头  
   
   <br>
-  <img src="../pic/paint1.png"/><br>
+  <img src=".../pic/paint1.png"/><br>
 
 
