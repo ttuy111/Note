@@ -40,18 +40,70 @@
 
    参数：  
 
-   `(x0,y0)` `(x1,y1)`：渐变的两个端点坐标
-   `color0` `color1`：渐变的两个端点颜色
+   `(x0,y0)` `(x1,y1)`：渐变的两个端点坐标  
+   `color0` `color1`：渐变的两个端点颜色  
    `title`：渐变规则（`CLAMP`、`REPEAT`、`MIRROR` ）
    <br>
-2. #### `RadialGradient` 镭射渐变
-3. #### `SweepGradient` 扫描渐变
+2. #### `RadialGradient` 辐射渐变
+   
+     构造方法：  
 
-4. #### `BitmapShader` 用 `Bitmap` 着色
+   `RadialGradient(float centerX, float centerY, float radius, int centerColor, int edgeColor, TileMode tileMode)`  
+
+   参数:  
+
+   `centerX` `centerY`：辐射渐变的中心   
+   `radius`：辐射的半径  
+   `centerColor`：渐变中心的颜色  
+   `edgeColor`：渐变边缘的颜色  
+   `titleMode`：渐变规则（`CLAMP`、`REPEAT`、`MIRROR` ）
+
+
+3. #### `SweepGradient` 扫描渐变  
+   
+   构造方法：  
+
+   `SweepGradient(float cx, float cy, int color0, int color1)`  
+
+   参数：  
+
+   `cx` `cy`：扫描的中心  
+
+   `color0`、`color1`：扫描的开始颜色和扫描的结束颜色
+
+4. #### `BitmapShader` 用 `Bitmap` 着色  
+   
+   构造方法：
+
+    `BitmapShader(Bitmap bitmap, Shader.TileMode tileX, Shader.TileMode tileY)`  
+
+    参数：  
+
+    `bitmap`：着色器所用的 `bitmap` 图像  
+    `titleX`、`titleY`：横向和纵向的模式
 
 5. #### `ComposeShader` 混合着色器
   
-     混合着色器就是把两个 `Shader` 一起使用
+     混合着色器就是把两个 `Shader` 一起使用  
+     
+     构造方法：  
+
+     `ComposeShader(Shader shaderA, Shader shaderB, PorterDuff.Mode mode)`  
+
+     参数：  
+
+     `shaderA`、`shaderB`：使用的两个 `Shader`  
+     `mode`：两个 `Shader` 的叠加模式 `PorterDuff.Mode` 
+
+      `PorterDuff.Mode` 一共可以分为两大类：参考 [官方文档](https://developer.android.com/reference/android/graphics/PorterDuff.Mode)  
+      
+      1.Alpha 合成  
+
+
+      2.混合  
+
+
+     
 
 
 ### 设置线条的宽度
