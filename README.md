@@ -23,7 +23,7 @@
 
    排序、并查集、栈和队列、红黑树、散列表。
 
-   - [Leetcode 题解](https://github.com/ttuy111/Note/blob/master/notes/leetCode/Leetode%20Guide.md)
+   - [Leetcode 题解](https://github.com/ttuy111/Note/blob/master/notes/leetCode/LeetCode%20Guide.md)
 
   对题目做了一个大致分类，并对每种题型的解题思路做了总结。
 
