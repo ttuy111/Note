@@ -23,7 +23,7 @@
 
    排序、并查集、栈和队列、红黑树、散列表。
 
-   - [Leetcode 题解](https://github.com/ttuy111/Note/blob/master/notes/leetCode/LeetCode%20Guide.md)
+   - [LeetCode 题解](https://github.com/ttuy111/Note/blob/master/notes/leetCode/LeetCode%20Guide.md)
 
   对题目做了一个大致分类，并对每种题型的解题思路做了总结。
 
@@ -77,7 +77,7 @@
 
 ### :memo: 后记 
 
-#### [记录一些平时的小想法](https://github.com/ttuy111/Note/blob/master/notes/idea/意淫%20Guide.md)  
+#### [记录一些平时的小想法](https://github.com/ttuy111/Note/blob/master/notes/idea/意淫%20Group.md)  
   
   一些平时意淫的小想法  
 
