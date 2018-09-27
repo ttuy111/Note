@@ -23,7 +23,13 @@
     - [反转链表](https://github.com/ttuy111/Note/blob/master/notes/leetCode/206.md)
 - 中等 
     - [两数相加](https://github.com/ttuy111/Note/blob/master/notes/leetCode/2.md)
+    - [两数相加 II](https://github.com/ttuy111/Note/blob/master/notes/leetCode/445.md)
+
+
 #### 树  
 - 简单  
 
+    - [相同的树](https://github.com/ttuy111/Note/blob/master/notes/leetCode/100.md)
     - [对称二叉树](https://github.com/ttuy111/Note/blob/master/notes/leetCode/101.md)  
+    - [二叉树的最大深度](https://github.com/ttuy111/Note/blob/master/notes/leetCode/104.md)
+    - [二叉树的层次遍历 II](https://github.com/ttuy111/Note/blob/master/notes/leetCode/107.md)

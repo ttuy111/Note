@@ -7,7 +7,7 @@
 </div>
 
 ### :iphone:Android
-- [自定义 View](https://github.com/ttuy111/Note/blob/master/notes/customView/CustomView%20Guide.md)
+- [自定义 View](https://github.com/ttuy111/Note/blob/master/notes/CustomView%20Guide.md)
 
   参考仍物线的 HenCoder 自定义 View 系列学习。
 
@@ -23,7 +23,7 @@
 
    排序、并查集、栈和队列、红黑树、散列表。
 
-   - [LeetCode 题解](https://github.com/ttuy111/Note/blob/master/notes/leetCode/LeetCode%20Guide.md)
+   - [LeetCode 题解](https://github.com/ttuy111/Note/blob/master/notes/LeetCode%20Guide.md)
 
   对题目做了一个大致分类，并对每种题型的解题思路做了总结。
 
