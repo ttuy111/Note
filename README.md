@@ -77,10 +77,6 @@
 
 ### :memo: 后记 
 
-#### [记录一些平时的小想法](https://github.com/ttuy111/Note/blob/master/notes/idea/意淫%20Group.md)  
-  
-  一些平时意淫的小想法  
-
 #### About
 
 本仓库主要是总结的学习笔记。
