@@ -31,3 +31,8 @@
     - [对称二叉树](https://github.com/ttuy111/Note/blob/master/notes/leetCode/101.md)  
     - [二叉树的最大深度](https://github.com/ttuy111/Note/blob/master/notes/leetCode/104.md)
     - [二叉树的层次遍历 II](https://github.com/ttuy111/Note/blob/master/notes/leetCode/107.md)
+- 中等  
+    - [二叉树的前序遍历](https://github.com/ttuy111/Note/blob/master/notes/leetCode/144.md)
+    - [二叉树的中序遍历](https://github.com/ttuy111/Note/blob/master/notes/leetCode/94.md)
+    - [二叉树的后序遍历](https://github.com/ttuy111/Note/blob/master/notes/leetCode/145.md)
+    - [二叉树的层次遍历](https://github.com/ttuy111/Note/blob/master/notes/leetCode/102.md)
