@@ -32,6 +32,7 @@
     - [二叉树的最大深度](https://github.com/ttuy111/Note/blob/master/notes/leetCode/104.md)
     - [二叉树的层次遍历 II](https://github.com/ttuy111/Note/blob/master/notes/leetCode/107.md)
     - [路径总和](https://github.com/ttuy111/Note/blob/master/notes/leetCode/112.md)
+    - [平衡二叉树](https://github.com/ttuy111/Note/blob/master/notes/leetCode/110.md)
 - 中等  
     - [二叉树的前序遍历](https://github.com/ttuy111/Note/blob/master/notes/leetCode/144.md)
     - [二叉树的中序遍历](https://github.com/ttuy111/Note/blob/master/notes/leetCode/94.md)
