@@ -1,19 +1,19 @@
-| Ⅰ | Ⅱ | Ⅲ | Ⅳ | Ⅴ | Ⅵ | Ⅶ | Ⅷ | Ⅸ | Ⅹ |
-| :--------: | :---------: | :---------: | :---------: | :---------: | :---------:| :---------: | :-------: | :-------:| :------:|
-| Android[:iphone:](#iphoneandroid) | Java [:coffee:](#coffee-java)| 算法[:pencil2:](#pencil2-算法) | 网络[:cloud:](#cloud-网络) | 面向对象[:couple:](#couple-面向对象) |备胎[:floppy_disk:](#floppy_disk-数据库)|  日常问题[:bulb:](#bulb-日常问题)| 工具[:hammer:](#hammer-工具)| 编码实践[:speak_no_evil:](#speak_no_evil-编码实践)| 后记[:memo:](#memo-后记) |
+|                 Ⅰ                 |               Ⅱ               |               Ⅲ                |             Ⅳ              |                  Ⅴ                   |                    Ⅵ                     |                Ⅶ                 |              Ⅷ               |                         Ⅸ                          |            Ⅹ             |
+| :-------------------------------: | :---------------------------: | :----------------------------: | :------------------------: | :----------------------------------: | :--------------------------------------: | :------------------------------: | :--------------------------: | :------------------------------------------------: | :----------------------: |
+| Android[:iphone:](#iphoneandroid) | Java [:coffee:](#coffee-java) | 算法[:pencil2:](#pencil2-算法) | 网络[:cloud:](#cloud-网络) | 面向对象[:couple:](#couple-面向对象) | 备胎[:floppy_disk:](#floppy_disk-数据库) | 日常问题[:bulb:](#bulb-日常问题) | 工具[:hammer:](#hammer-工具) | 编码实践[:speak_no_evil:](#speak_no_evil-编码实践) | 后记[:memo:](#memo-后记) |
 
 
 <br><div align="center"><img src="other/LogoMakr_0zpEzN.png" width="150px"><br>
 </div>
 
 ### :iphone:Android
-- [自定义 View](https://github.com/ttuy111/Note/blob/master/notes/CustomView%20Guide.md)
+- [自定义 View](./notes/CustomView%20Guide.md)
 
   参考仍物线的 HenCoder 自定义 View 系列学习。
 
 ### :coffee: Java
 
-- [Java 基础]()
+- [Java 基础](./notes/Java基础.md)
 
   不会涉及很多基本语法介绍，主要是一些实现原理以及关键特性。
 
@@ -23,7 +23,7 @@
 
    排序、并查集、栈和队列、红黑树、散列表。
 
-   - [LeetCode 题解](https://github.com/ttuy111/Note/blob/master/notes/LeetCode%20Guide.md)
+   - [LeetCode 题解](./notes/LeetCode%20Guide.md)
 
   对题目做了一个大致分类，并对每种题型的解题思路做了总结。
 
@@ -50,7 +50,7 @@
 
 ### :bulb: 日常问题 
 
-- [Android 崩溃解决](https://github.com/ttuy111/Note/blob/master/notes/Android%20Solve.md)
+- [Android 崩溃解决](./notes/Android%20Solve.md)
 
   主要记录 **Android** 开发过程中一些平时碰到的崩溃和解决方法。
 
