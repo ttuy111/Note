@@ -543,6 +543,465 @@ public int hashCode() {
 }
 ```
 
+## 5.3 toString()
+
+默认返回 ToStringExample@63947c6b 这种形式，其中 @ 后面的数值为散列码的无符号十六进制表示。
+
+```java
+public class ToStringExample {
+    private int number;
+
+    public ToStringExample(int number) {
+        this.number = number;
+    }
+}
+```
+
+```java
+ToStringExample example = new ToStringExample(123);
+System.out.println(example.toString());
+```
+
+## 5.4 clone()
+
+clone() 是 Object 的 protect 方法， 它不是 public， 一个类不显式去重写clone()，其他类就不能直接去调用该类实例的clone()方法。我们可以通过重写 clone() 去实现浅拷贝或深拷贝。 super.clone() 默认情况下实现对象的浅拷贝。
+
+- 浅拷贝:当字段的类型是基本数据类型时，会复制属性和值，当字段的类型是引用类型时候，会生成引用指向相同的对象地址。
+- 深拷贝:当字段的类型是基本数据类型时，会复制属性和值， 当字段的类型是引用类型时，会把当前字段引用的对象再复制一份。
+
+
+```java
+public class ShallowCloneExample implements Cloneable {
+    private int[] arr;
+
+    public ShallowCloneExample() {
+        arr = new int[10];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = i;
+        }
+    }
+
+    public void set(int index, int value) {
+        arr[index] = value;
+    }
+
+    public int get(int index) {
+        return arr[index];
+    }
+
+    @Override
+    protected ShallowCloneExample clone() throws CloneNotSupportedException {
+        return (ShallowCloneExample) super.clone();
+    }
+}
+```
+```java
+ShallowCloneExample e1 = new ShallowCloneExample();
+ShallowCloneExample e2 = null;
+try {
+    e2 = e1.clone();
+} catch (CloneNotSupportedException e) {
+    e.printStackTrace();
+}
+e1.set(2, 111);
+System.out.println(e2.get(2)); // 111
+```
+
+使用 clone() 方法来拷贝一个对象既复杂又有风险，它会抛出异常，还需要类型转换。因此不推荐使用clone(),可以使用拷贝构造函数或者拷贝工厂来拷贝一个对象。
+
+```java
+public class CloneConstructorExample {
+    private int[] arr;
+
+    public CloneConstructorExample() {
+        arr = new int[10];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = i;
+        }
+    }
+
+    public CloneConstructorExample(CloneConstructorExample original) {
+        arr = new int[original.arr.length];
+        for (int i = 0; i < original.arr.length; i++) {
+            arr[i] = original.arr[i];
+        }
+    }
+
+    public void set(int index, int value) {
+        arr[index] = value;
+    }
+
+    public int get(int index) {
+        return arr[index];
+    }
+}
+```
+
+```java
+CloneConstructorExample e1 = new CloneConstructorExample();
+CloneConstructorExample e2 = new CloneConstructorExample(e1);
+e1.set(2, 222);
+System.out.println(e2.get(2)); // 2
+```
+
+# 六、关键字
+
+## 6.1 final
+
+**(1) 数据**
+
+声明数据为常量，可以是编译时常量，也可以使在运行时被初始化后不能被改变的常量。
+
+- 对于基本类型，final 使数值不变；
+- 对于引用类型，final 使引用不变，也就不能引用其他对象，但是被引用的对象本身是可以修改的。
+
+```java
+final int x = 1;
+final A y = new A();
+y.a =1;
+```
+
+**(2) 方法**
+
+声明方法不能被子类重写。
+
+private 方法隐式地被指定为final，如果在子类中定义的方法和基类中的一个 private 方法签名相同，此时子类的方法不是重写基类方法，而是在子类中定义了一个新的方法。
+
+**(3) 类**
+
+声明类不允许被继承。
+
+## 6.2 static
+
+**(1) 静态变量**
+
+静态变量在所在进程内存中只存在一份，在类加载阶段进行赋值。
+
+- 静态变量：类所有的实例都共享静态变量，可以直接通过类名来访问它；
+- 实例变量：每创建一个实例就会产生一个实例变量，它与该实例同生共死。
+
+```java
+public class A {
+    private int x;         // 实例变量
+    private static int y;  // 静态变量
+
+    public static void main(String[] args) {
+        // int x = A.x;  // Non-static field 'x' cannot be referenced from a static context
+        A a = new A();
+        int x = a.x;
+        int y = A.y;
+    }
+}
+```
+
+**(2) 静态方法**
+
+静态方法在类加载的时候就存在了，它不依赖于任何实例，所以静态方法必须有实现，也就是说它不能是抽象方法 (abstract)
+
+```java
+public abstract class A {
+    public static void func1(){
+    }
+    // public abstract static void func2();  // Illegal combination of modifiers: 'abstract' and 'static'
+}
+```
+
+只能访问所属类的静态字段和静态方法，方法中不能有 this 和 super 关键字。
+
+```java
+public class A {
+    
+    private static int x;
+    private int y;
+
+    public static void func1(){
+        int a = x;
+        // int b = y;  // Non-static field 'y' cannot be referenced from a static context
+        // int b = this.y;     // 'A.this' cannot be referenced from a static context
+    }
+}
+```
+
+**(3) 静态代码块**
+
+静态语句块在类初始化时运行一次。
+
+```java
+public class A {
+    
+    static {
+        System.out.println("123");
+    }
+
+    public static void main(String[] args) {
+        A a1 = new A();
+        A a2 = new A();
+    }
+}
+//程序运行后会输出123
+```
+
+**(4) 静态内部类**
+
+非静态内部类依赖于外部类的实例，并持有外部类的引用，而静态内部类则不会。
+
+```java
+public class OuterClass {
+    
+    class InnerClass {
+    }
+
+    static class StaticInnerClass {
+    }
+
+    public static void main(String[] args) {
+        // InnerClass innerClass = new InnerClass(); // 'OuterClass.this' cannot be referenced from a static context
+        OuterClass outerClass = new OuterClass();
+        InnerClass innerClass = outerClass.new InnerClass();
+        StaticInnerClass staticInnerClass = new StaticInnerClass();
+    }
+}
+```
+
+静态内部类不能访问外部类的非静态方法和变量。
+
+**(5) 静态导包**
+
+```java
+import static com.xxx.ClassName.*
+```
+在使用静态变量和方法时不用再指明 ClassName, 从而简化代码，但是可读性大大降低。
+
+**(6) 初始化顺序**
+
+静态变量和静态语句优先于实例变量和普通语句块，静态变量和静态语句块的初始化顺序取决于它们在代码中的顺序。
+
+```java
+public static String staticField = "静态变量";
+```
+
+```java
+static{
+     System.out.println("静态语句块");
+}
+```
+
+```java
+public String field = "实例变量";
+```
+
+最后才是构造函数的初始化。
+
+```java
+public InitialOrderTest() {
+    System.out.println("构造函数");
+}
+```
+
+存在继承的情况下，初始化顺序为:
+- 父类(静态变量、静态语句块)
+- 子类(静态变量、静态语句块)
+- 父类(实例变量、普通语句块)
+- 父类(构造函数)
+- 子类(实例变量、普通语句块)
+- 子类(构造函数)
+
+# 七、反射
+
+反射机制是指在运行状态中，对任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性。这种动态获取的信息以及动态调用对象的方法的功能称为 Java 的反射机制。
+
+每个类都有一个 Class 对象， 包含了与类有关的信息。 当编译一个新类时，会产生一个同名的 .class 文件，该文件内容保存着 Class 对象。
+
+Class 和java.lang。reflect 一起对反射提供了支持。
+
+## 7.1 反射的基本运用
+
+### 7.1.1 Class 对象的获取
+
+类加载相当于 Class 对象的加载，类在第一次使用时才动态加载到 JVM 中。
+
+(1) 使用 Class.forName() 方法
+
+```java
+// 这也是在反射需求中，常用的运用中获取 Class 对象的方式。
+public static Class<?> forName(String className)
+```
+
+（2）某个类的 class
+
+```java
+Class<Integer> integerClass = int.class;
+Class<Integer> integerClass1 = Integer.class;
+```
+
+（3）某个对象的 getClass() 方法
+
+```java
+String s = new String("123");
+Class<?> aClass = s.getClass();
+```
+
+### 7.2.2 反射 API
+
+**(1) 判断是否为某个类的实例**
+
+```java
+public native boolean isInstance(Object obj);
+```
+
+**(2) 创建实例**
+
+- 调用 Class 对象的 newInstance()
+
+```java
+Class<?> c = String.class;
+// 相当于 new 了一个无参对象
+String str = (String) c.newInstance();
+```
+
+- 获取指定的 Constructor 对象， 再调用 Constructor 对象的 newInstance() 方法
+
+```java
+Class<?> c = String.class;
+// 获取 String 类带一个 String 参数的构造器
+Constructor constructor = c.getConstructor(String.class);
+// 根据构造器创建实例
+Object obj = constructor.newInstance("123");
+System.out.println(obj);
+```
+
+**(3) 获取方法**
+
+```java
+//返回所有的public方法，包括其继承类的公用方法
+public Method[] getMethods() throws SecurityException
+
+//返回类和接口声明的所有方法，包括公共、保护、默认、私有方法，但是不包括继承的方法。
+public Method[] getDeclaredMethods() throws SecurityException
+
+// 返回一个特定的方法，其中第一个参数为方法名称，后面的参数为方法的参数对应 Class 的对象。方法的区间范围为上面描述的范围。
+public Method getMethod(String name, Class<?>... parameterTypes)
+
+public Method getDeclaredMethod(String name, Class<?>... parameterTypes)
+```
+
+**(4) 获取类的成员变量信息**
+
+```java
+// 获取所有 public 的成员变量。
+public Field[] getFields() 
+
+// 所有已声明的成员变量，但不能得到其父类的成员变量。
+public Field[] getDeclaredFields();
+
+// 获取变量名为 name 的成员变量。
+public Field getField(String name)
+
+```
+
+**(5) 调用方法**
+
+```java
+//当我们从类中获取了一个方法后，我们就可以用 Method.invoke() 方法来调用这个方法。
+//obj 为拥有 Method 的对象， args 为具体的参数值。
+//在使用 private 方法时候 要再invoke 前加上 setAccessible(true);
+public Object invoke(Object obj, Object... args)
+        throws IllegalAccessException, IllegalArgumentException,
+           InvocationTargetException
+```
+
+**(6) 创建数组**
+
+数组在 Java 里是比较特殊的一种类型，它可以赋值给一个 Object Reference。
+```java
+Class<?> cls = Class.forName("java.lang.String");
+// 第一个参数为数组中的字段类型，第二个参数为容器大小。
+Object array = Array.newInstance(cls, 25);
+// 往数组里添加内容。
+Array.set(array, 0, "hello");
+Array.set(array, 1, "Java");
+Array.set(array, 2, "fuck");
+Array.set(array, 3, "Scala");
+Array.set(array, 4, "Clojure");
+// 获取某一项的内容。
+System.out.println(Array.get(array, 3)); //Scala
+```
+
+## 7.2 反射的优缺点
+
+**（1）反射的优点**
+1. 提高了程序的灵活性和扩展性，降低了耦合性。它允许程序创建和控制任何类的对象，无需提前硬编码目标类。
+2. 调试器需要能够检查一个类里的私有成员。测试工具可以利用反射来自动地调用类里定义的可被发现的API，以确保一组测试中也有较高的代码覆盖率。
+
+**(2) 反射的缺点**
+
+尽管反射非常强大，但也不能滥用。如果一个功能可以不用反射完成，那么最好就不用。在我们使用反射技术时，下面几条内容应该牢记于心。
+
+1. 性能开销：反射涉及了动态类型的解析，所以 JVM 无法对这些代码进行优化。 因此， 反射操作的效率要比非反射操作低。 我们应该避免在经常被执行的代码或者对性能有很高要求的程序中使用反射。
+
+2. 安全限制：使用反射技术要求程序必须在一个没有圈圈限制的环境中运行。如果一个程序必须在有安全限制的环境中运行，如 Applet，那么就不能使用反射。
+
+3. 安全问题：由于反射可以忽略掉权限检查，因此可能会破坏封装性而导致安全问题。
+
+# 八、 异常
+
+Throwable 是所有的异常的共同的父类， Throwable 分为两种子类: **Error** 和 **Exception**。
+
+<div align ="center"> <img src ="../pic//Java%20异常结构图.webp" /> </div><br>
+
+其中 Error 表示不许忘被程序捕获或者是程序无法处理的错误； Exception 用户程序可能捕捉的异常情况或是程序可以处理的异常。
+
+Exception 又分为 **运行时异常（RuntimeException）** 和 **非运行时异常（RuntimeException 之外的异常）**。
+
+Java 异常又可以分为不受检查异常 (Unchecked Exception) 和检查异常(Checked Exception)。
+
+- 不受检查异常：编译器不要求强制处理的异常。这些异常包括 RuntimeException(及其子类) 以及 Error(及其子类)。
+- 检查异常：则是编译器要求必须处置的异常。当程序中可能出现这类异常，要么使用 try-catch 语句进行捕获， 要么用 throws 抛出，否则无法编译通过。这些异常包括 Exception 及其子类（RuntimeException 及其子类除外） 
+
+注意: 当try 语句和 finally 语句中都有 return 语句时，在方法返回之前， finally 语句的内容将被执行，并且 finally 语句的返回值将会覆盖原始的返回值。
+
+
+# 九、泛型
+
+```java
+public class Box<T> {
+    // T stands for "Type"
+    private T t;
+    public void set(T t) { this.t = t; }
+    public T get() { return t; }
+}
+```
+
+- 泛型是通过类型擦除来实现的，编译器在编译时擦除了所有类型相关的信息，然后在运行期拿到泛型元数据进行隐式强转。
+-泛型通过 IDE 的支持，可以尽量保证编译器的类型安全（例如 List 可以而 Array 缺不能）
+
+- [10 道 Java 泛型面试题](https://cloud.tencent.com/developer/article/1033693)
+
+# 十、注解
+
+Java 注解是附加在代码中的一些元信息，用于一些工具在编译、运行时进行解析和使用，起到说明、配置的功能。注解不会也不能影响代码的实际逻辑，仅仅起到辅助性的作用。
+
+- [注解 Annotation 实现原理与自定义注解例子](https://www.cnblogs.com/acm-bingzi/p/javaAnnotation.html)
+
+注解待补充
+
+
+# 十一、Type
+
+Type 待补充
+
+# 十二、JDK 和 JRE
+
+JDK 全名 Java Development Kit，它是功能齐全的 Java SDK。它拥有 JRE 所拥有的一切，还有编译器（javac）和工具（如 javadoc 和 jdb）。它能够创建和编译程序。
+
+JRE 全名 java runtime environment，是 Java 程序的运行环境。它包含了运行已编译 Java 程序所需所有内容的集合，包括 Java 虚拟机（JVM），Java 类库，Java 命令和其他的一些基础构件。但是，它不能用于创建新程序。
+
+# 参考资料
+
+- Bloch J. Effective java[M]. Addison-Wesley Professional, 2017.
+- [CS-Notes. Java 基础](https://github.com/CyC2018/CS-Notes/blob/master/docs/notes/Java%20%E5%9F%BA%E7%A1%80.md)
+- [LearningNotes. Java 基础](https://github.com/passin95/LearningNotes/blob/master/notes/Java%20%E5%9F%BA%E7%A1%80.md)
+
 
 
 
